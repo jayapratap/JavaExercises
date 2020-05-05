@@ -1,0 +1,72 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class CollectionsExercise2 {
+	public static void main(String[] args) {
+		
+		//Implementing List
+		listWriteAndRead();
+		
+		//Implementing Map
+		mapWriteAndRead();
+		
+		//Implementing Set
+		setWriteAndRead();
+		
+	}
+	
+	static void listWriteAndRead() {
+		
+		List<String> list = new ArrayList<String>();
+
+		list.add("Jaya");
+		list.add("Pratap");
+		list.add("Akhil");
+		list.add("Gowtham");
+		
+		for (String l: list) {
+			System.out.println(l);
+		}
+	}
+	
+	static void mapWriteAndRead() {
+		
+		Map<Integer, String> map = new HashMap<Integer, String>();
+		
+		map.put(1, "Jay");
+		map.put(2, "Pratap");
+		map.put(3, "Akhil");
+		map.put(4, "Shyam");
+		map.put(5, "Hari");
+		map.put(6, "Kiran");
+		
+		for(Entry<Integer, String> entry: map.entrySet()) {
+			System.out.println("Key: "+entry.getKey()+" | value: "+entry.getValue());
+		}
+		
+	}
+	
+	static void setWriteAndRead() {
+		
+		Set<Character> ch = new HashSet<Character>();
+		
+		ch.add('a');
+		ch.add('b');
+		ch.add('c');
+		ch.add('d');
+		ch.add('e');
+		ch.add('a');
+		ch.add('b');
+		
+		for (Character set : ch) {
+			System.out.println(set);
+		}
+		
+	}
+	
+}
