@@ -1,0 +1,21 @@
+
+public class CollectionsExercise1 {
+	
+	public static void main(String[] args) {
+		
+		Object[] ObjectArray = new Object[6];
+		
+		ObjectArray[0] = 10;
+		ObjectArray[1] = "Jay";
+		ObjectArray[2] = new Object();
+		ObjectArray[3] = 9.77777;
+		ObjectArray[4] = (short)122;
+		ObjectArray[5] = (double)10000000;
+		
+		//Printing the objects
+		for (Object object : ObjectArray) {
+			System.out.println(object);
+		}
+	}
+	
+}
