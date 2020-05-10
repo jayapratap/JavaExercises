@@ -1,0 +1,73 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+class Bike implements Comparable<Bike> {
+	
+	private String model;
+	private String brand;
+	private int modelYear;
+	
+	@Override
+	public int compareTo(Bike b) {
+		return this.modelYear - b.modelYear;
+	}
+	
+	public Bike(String model, String brand, int modelYear) {
+		super();
+		this.model = model;
+		this.brand = brand;
+		this.modelYear = modelYear;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public int getModelYear() {
+		return modelYear;
+	}
+}
+class BrandCompare implements Comparator<Bike> 
+{ 
+    public int compare(Bike b1, Bike b2) 
+    { 
+        return b1.getBrand().compareTo(b2.getBrand()); 
+    } 
+} 
+
+public class CollectionsExercise3 {
+	
+	public static void main(String[] args) {
+		
+		ArrayList<Bike> bikes = new ArrayList<Bike>();
+		bikes.add(new Bike("FZ", "Yamaha", 2011));
+		bikes.add(new Bike("Shine", "Honda", 2013));
+		bikes.add(new Bike("Splender", "Hero", 2010));
+		bikes.add(new Bike("RTR", "Apache", 2015));
+		
+		Collections.sort(bikes);
+		
+		System.out.println("Bikes after Sorting the year of the bikes using comparable");
+		System.out.println("----------------------------------------------------------");
+		
+		for (Bike bike : bikes) {
+			System.out.println(bike.getModelYear() + " " + 
+                    bike.getBrand() + " " + bike.getModel());
+		}
+		
+		System.out.println("\nBikes after Sorting the Brand of the bikes using comparator"); 
+		System.out.println("----------------------------------------------------------");
+		BrandCompare brandCompare = new BrandCompare(); 
+        Collections.sort(bikes, brandCompare); 
+        for (Bike bike : bikes) {
+			System.out.println(bike.getBrand() + " " + 
+                    bike.getModelYear() + " " + bike.getModel());
+		}
+		
+	}
+}
