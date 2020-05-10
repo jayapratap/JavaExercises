@@ -71,3 +71,22 @@ public class CollectionsExercise3 {
 		
 	}
 }
+
+
+/*  ---Output---
+
+Bikes after Sorting the year of the bikes using comparable
+----------------------------------------------------------
+2010 Hero Splender
+2011 Yamaha FZ
+2013 Honda Shine
+2015 Apache RTR
+
+Bikes after Sorting the Brand of the bikes using comparator
+----------------------------------------------------------
+Apache 2015 RTR
+Hero 2010 Splender
+Honda 2013 Shine
+Yamaha 2011 FZ
+
+*/
