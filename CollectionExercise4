@@ -28,6 +28,7 @@ public class CollectionExercise4 {
 		
 		Person p1 = new Person("Pratap",1);
 		Person p2 = new Person("Pratap",1);
+		//Generate same hashcode values.
 		
 		Map<Person, String> map = new HashMap<Person, String>();
 		map.put(p1, "Apple");
