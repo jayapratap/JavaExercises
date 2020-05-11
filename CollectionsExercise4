@@ -23,7 +23,7 @@ class Person{
 	}
 }
 
-public class CollectionExercise4 {
+public class CollectionsExercise4 {
 	public static void main(String args[]) {
 		
 		Person p1 = new Person("Pratap",1);
